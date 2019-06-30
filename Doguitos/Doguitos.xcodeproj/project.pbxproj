@@ -22,6 +22,9 @@
 		22D7A55222C95A5A00572802 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D7A55122C95A5A00572802 /* AuthManager.swift */; };
 		22D7A55422C95A6400572802 /* DogsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D7A55322C95A6400572802 /* DogsManager.swift */; };
 		22D7A55722C95ADC00572802 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D7A55622C95ADC00572802 /* AppCoordinator.swift */; };
+		423AC5EF7D86A706E6593651 /* Pods_Doguitos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FFAC6E068CC1B18CDA454FA /* Pods_Doguitos.framework */; };
+		68C0A86495847468C447856C /* Pods_DoguitosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0941BFFB3400ED331319FC46 /* Pods_DoguitosUITests.framework */; };
+		6E8B133E540BDFDB68466879 /* Pods_DoguitosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CF2C1B36BE161E2DDEA7B87 /* Pods_DoguitosTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0941BFFB3400ED331319FC46 /* Pods_DoguitosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoguitosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EAB07D3B5E905A153D22CE7 /* Pods-DoguitosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoguitosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DoguitosTests/Pods-DoguitosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		22D7A50122C9589800572802 /* Doguitos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Doguitos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22D7A50422C9589800572802 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22D7A50B22C9589900572802 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,6 +68,13 @@
 		22D7A55122C95A5A00572802 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		22D7A55322C95A6400572802 /* DogsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsManager.swift; sourceTree = "<group>"; };
 		22D7A55622C95ADC00572802 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		2CF2C1B36BE161E2DDEA7B87 /* Pods_DoguitosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoguitosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B2FBDBB7541C86BF09EEC06 /* Pods-DoguitosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoguitosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DoguitosTests/Pods-DoguitosTests.release.xcconfig"; sourceTree = "<group>"; };
+		5FFAC6E068CC1B18CDA454FA /* Pods_Doguitos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Doguitos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		616595DCE32A97C8A4BC0573 /* Pods-Doguitos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doguitos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Doguitos/Pods-Doguitos.debug.xcconfig"; sourceTree = "<group>"; };
+		B14EDD5D965A0F034C10D030 /* Pods-DoguitosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoguitosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DoguitosUITests/Pods-DoguitosUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E0B1309966E8F5F42E0198D2 /* Pods-DoguitosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoguitosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DoguitosUITests/Pods-DoguitosUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FCF9FB37DE85BFB4C4D53B30 /* Pods-Doguitos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doguitos.release.xcconfig"; path = "Pods/Target Support Files/Pods-Doguitos/Pods-Doguitos.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				423AC5EF7D86A706E6593651 /* Pods_Doguitos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E8B133E540BDFDB68466879 /* Pods_DoguitosTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68C0A86495847468C447856C /* Pods_DoguitosUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +112,8 @@
 				22D7A51822C9589A00572802 /* DoguitosTests */,
 				22D7A52322C9589A00572802 /* DoguitosUITests */,
 				22D7A50222C9589800572802 /* Products */,
+				4EB59383A4BC50E029962018 /* Pods */,
+				991132B2B0C5C128AC2DE872 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -285,6 +302,29 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		4EB59383A4BC50E029962018 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				616595DCE32A97C8A4BC0573 /* Pods-Doguitos.debug.xcconfig */,
+				FCF9FB37DE85BFB4C4D53B30 /* Pods-Doguitos.release.xcconfig */,
+				0EAB07D3B5E905A153D22CE7 /* Pods-DoguitosTests.debug.xcconfig */,
+				4B2FBDBB7541C86BF09EEC06 /* Pods-DoguitosTests.release.xcconfig */,
+				B14EDD5D965A0F034C10D030 /* Pods-DoguitosUITests.debug.xcconfig */,
+				E0B1309966E8F5F42E0198D2 /* Pods-DoguitosUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		991132B2B0C5C128AC2DE872 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5FFAC6E068CC1B18CDA454FA /* Pods_Doguitos.framework */,
+				2CF2C1B36BE161E2DDEA7B87 /* Pods_DoguitosTests.framework */,
+				0941BFFB3400ED331319FC46 /* Pods_DoguitosUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -292,9 +332,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22D7A52922C9589A00572802 /* Build configuration list for PBXNativeTarget "Doguitos" */;
 			buildPhases = (
+				83FBDF1D08AC33FE5052482E /* [CP] Check Pods Manifest.lock */,
 				22D7A4FD22C9589800572802 /* Sources */,
 				22D7A4FE22C9589800572802 /* Frameworks */,
 				22D7A4FF22C9589800572802 /* Resources */,
+				FC0EAB51A94AC898996DCAD9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -309,6 +351,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22D7A52C22C9589A00572802 /* Build configuration list for PBXNativeTarget "DoguitosTests" */;
 			buildPhases = (
+				FA0321A48AFA7F6C85DE9C26 /* [CP] Check Pods Manifest.lock */,
 				22D7A51122C9589A00572802 /* Sources */,
 				22D7A51222C9589A00572802 /* Frameworks */,
 				22D7A51322C9589A00572802 /* Resources */,
@@ -327,6 +370,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22D7A52F22C9589A00572802 /* Build configuration list for PBXNativeTarget "DoguitosUITests" */;
 			buildPhases = (
+				1C876339D524167F78A58E27 /* [CP] Check Pods Manifest.lock */,
 				22D7A51C22C9589A00572802 /* Sources */,
 				22D7A51D22C9589A00572802 /* Frameworks */,
 				22D7A51E22C9589A00572802 /* Resources */,
@@ -409,6 +453,105 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1C876339D524167F78A58E27 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DoguitosUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		83FBDF1D08AC33FE5052482E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Doguitos-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA0321A48AFA7F6C85DE9C26 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DoguitosTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC0EAB51A94AC898996DCAD9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Doguitos/Pods-Doguitos-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Doguitos/Pods-Doguitos-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		22D7A4FD22C9589800572802 /* Sources */ = {
@@ -590,6 +733,7 @@
 		};
 		22D7A52A22C9589A00572802 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 616595DCE32A97C8A4BC0573 /* Pods-Doguitos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -608,6 +752,7 @@
 		};
 		22D7A52B22C9589A00572802 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCF9FB37DE85BFB4C4D53B30 /* Pods-Doguitos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -626,6 +771,7 @@
 		};
 		22D7A52D22C9589A00572802 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EAB07D3B5E905A153D22CE7 /* Pods-DoguitosTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -647,6 +793,7 @@
 		};
 		22D7A52E22C9589A00572802 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B2FBDBB7541C86BF09EEC06 /* Pods-DoguitosTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -668,6 +815,7 @@
 		};
 		22D7A53022C9589A00572802 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B14EDD5D965A0F034C10D030 /* Pods-DoguitosUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -688,6 +836,7 @@
 		};
 		22D7A53122C9589A00572802 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0B1309966E8F5F42E0198D2 /* Pods-DoguitosUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
