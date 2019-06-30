@@ -7,3 +7,13 @@
 //
 
 import Foundation
+import RealmSwift
+
+class UserRealm: Object {
+    @objc dynamic var email: String = ""
+    @objc dynamic var token: String = ""
+    
+    override static func primaryKey() -> String {
+        return "token"
+    }
+}

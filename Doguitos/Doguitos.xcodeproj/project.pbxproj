@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		227F36F722C96B6200365DDA /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227F36F622C96B6200365DDA /* SplashController.swift */; };
+		227F36F922C96B6D00365DDA /* SplashController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227F36F822C96B6D00365DDA /* SplashController.xib */; };
+		227F36FB22C96C0800365DDA /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227F36FA22C96C0800365DDA /* AuthViewModel.swift */; };
+		227F36FD22C96E0700365DDA /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227F36FC22C96E0700365DDA /* LoginController.swift */; };
+		227F370022C974D200365DDA /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227F36FF22C974D200365DDA /* HomeCoordinator.swift */; };
+		227F370222C9757300365DDA /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227F370122C9757300365DDA /* LoginController.xib */; };
+		227F370522C9777F00365DDA /* AuthenticationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227F370422C9777F00365DDA /* AuthenticationCoordinator.swift */; };
 		22D7A50522C9589800572802 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D7A50422C9589800572802 /* AppDelegate.swift */; };
 		22D7A50C22C9589900572802 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22D7A50B22C9589900572802 /* Assets.xcassets */; };
 		22D7A50F22C9589900572802 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22D7A50D22C9589900572802 /* LaunchScreen.storyboard */; };
@@ -47,6 +54,13 @@
 /* Begin PBXFileReference section */
 		0941BFFB3400ED331319FC46 /* Pods_DoguitosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoguitosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EAB07D3B5E905A153D22CE7 /* Pods-DoguitosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoguitosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DoguitosTests/Pods-DoguitosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		227F36F622C96B6200365DDA /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
+		227F36F822C96B6D00365DDA /* SplashController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashController.xib; sourceTree = "<group>"; };
+		227F36FA22C96C0800365DDA /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		227F36FC22C96E0700365DDA /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		227F36FF22C974D200365DDA /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		227F370122C9757300365DDA /* LoginController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginController.xib; sourceTree = "<group>"; };
+		227F370422C9777F00365DDA /* AuthenticationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationCoordinator.swift; sourceTree = "<group>"; };
 		22D7A50122C9589800572802 /* Doguitos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Doguitos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22D7A50422C9589800572802 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22D7A50B22C9589900572802 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,6 +119,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		227F36F322C96B3B00365DDA /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				227F36FA22C96C0800365DDA /* AuthViewModel.swift */,
+				227F36F422C96B4C00365DDA /* Splash */,
+				227F36F522C96B5300365DDA /* Login */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		227F36F422C96B4C00365DDA /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				227F36F822C96B6D00365DDA /* SplashController.xib */,
+				227F36F622C96B6200365DDA /* SplashController.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		227F36F522C96B5300365DDA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				227F370122C9757300365DDA /* LoginController.xib */,
+				227F36FC22C96E0700365DDA /* LoginController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		227F36FE22C974C600365DDA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				227F36FF22C974D200365DDA /* HomeCoordinator.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		227F370322C9776D00365DDA /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				227F370422C9777F00365DDA /* AuthenticationCoordinator.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		22D7A4F822C9589800572802 = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				22D7A53D22C9595B00572802 /* App */,
+				227F36F322C96B3B00365DDA /* Authentication */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -181,6 +240,8 @@
 			children = (
 				22D7A54822C959A700572802 /* Coordinator.swift */,
 				22D7A55522C95AD200572802 /* App */,
+				227F370322C9776D00365DDA /* Authentication */,
+				227F36FE22C974C600365DDA /* Home */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -434,7 +495,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				22D7A50F22C9589900572802 /* LaunchScreen.storyboard in Resources */,
+				227F370222C9757300365DDA /* LoginController.xib in Resources */,
 				22D7A50C22C9589900572802 /* Assets.xcassets in Resources */,
+				227F36F922C96B6D00365DDA /* SplashController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,10 +628,15 @@
 				22D7A50522C9589800572802 /* AppDelegate.swift in Sources */,
 				22D7A53F22C9596400572802 /* BaseController.swift in Sources */,
 				22D7A54522C9599100572802 /* UserRealm.swift in Sources */,
+				227F370022C974D200365DDA /* HomeCoordinator.swift in Sources */,
 				22D7A54722C9599B00572802 /* Dogs.swift in Sources */,
+				227F36F722C96B6200365DDA /* SplashController.swift in Sources */,
 				22D7A53C22C9595100572802 /* UIColor.swift in Sources */,
 				22D7A55422C95A6400572802 /* DogsManager.swift in Sources */,
+				227F36FB22C96C0800365DDA /* AuthViewModel.swift in Sources */,
 				22D7A54922C959A700572802 /* Coordinator.swift in Sources */,
+				227F370522C9777F00365DDA /* AuthenticationCoordinator.swift in Sources */,
+				227F36FD22C96E0700365DDA /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

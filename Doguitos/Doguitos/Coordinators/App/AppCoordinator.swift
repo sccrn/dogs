@@ -16,6 +16,7 @@ class AppCoordinator: Coordinator {
     
     private lazy var navigationController: UINavigationController = {
         let navigationController = UINavigationController()
+        navigationController.setNavigationBarHidden(true, animated: true)
         return navigationController
     }()
     
@@ -28,6 +29,28 @@ class AppCoordinator: Coordinator {
     }
     
     func start() {
+        let splashScreen = SplashController()
+        splashScreen.viewModel.splashCoordinator = self
+        rootViewController.present(splashScreen, animated: false, completion: nil)
+    }
+}
+
+extension AppCoordinator: SplashCoordinatorDelegate {
+    func moveForward(controller: SplashController, didSelectFlow flow: AuthFlow) {
+        controller.dismiss(animated: false, completion: nil)
+        childCoordinators.forEach { self.removeChildCoordinator($0) }
         
+        switch flow {
+        case .login:
+            let authCoordinator = AuthenticationCoordinator()
+            authCoordinator.start()
+            addChildCoordinator(authCoordinator)
+            rootViewController.present(authCoordinator.rootViewController, animated: false, completion: nil)
+        case .home:
+            let homeCoordinator = HomeCoordinator()
+            homeCoordinator.start()
+            addChildCoordinator(homeCoordinator)
+            rootViewController.present(homeCoordinator.rootViewController, animated: false, completion: nil)
+        }
     }
 }

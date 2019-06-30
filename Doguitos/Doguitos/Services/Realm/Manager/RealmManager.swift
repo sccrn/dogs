@@ -7,3 +7,23 @@
 //
 
 import Foundation
+import RealmSwift
+
+class RealmManager {
+    let realm = try? Realm()
+    
+    func saveObjc(obj: UserRealm) {
+        try? realm!.write {
+            realm?.add(obj, update: false)
+        }
+    }
+    
+    func deleteObj(obj: UserRealm) {
+        realm!.delete(obj)
+    }
+    
+    func getObj() -> UserRealm? {
+        let obj = realm!.object(ofType: UserRealm.self, forPrimaryKey: "token")
+        return obj
+    }
+}
