@@ -9,7 +9,12 @@
 import Foundation
 import UIKit
 
+protocol AuthenticationDelegate: class {
+    func didEndFlow(coordinator: AuthenticationCoordinator)
+}
+
 class AuthenticationCoordinator: Coordinator {
+    weak var delegate: AuthenticationDelegate?
     var childCoordinators: [Coordinator] = []
     var rootViewController: UIViewController { return navigationController }
 
@@ -28,12 +33,6 @@ class AuthenticationCoordinator: Coordinator {
 
 extension AuthenticationCoordinator: LoginCoordinatorDelegate {
     func moveForwardToHome(controller: LoginController) {
-        controller.dismiss(animated: false, completion: nil)
-        childCoordinators.forEach { self.removeChildCoordinator($0) }
-        
-        let homeCoordinator = HomeCoordinator()
-        homeCoordinator.start()
-        addChildCoordinator(homeCoordinator)
-        rootViewController.present(homeCoordinator.rootViewController, animated: false, completion: nil)
+        delegate?.didEndFlow(coordinator: self)
     }
 }

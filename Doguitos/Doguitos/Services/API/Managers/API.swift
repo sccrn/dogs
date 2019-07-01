@@ -12,7 +12,7 @@ import Alamofire
 ///This is the enum that we're gonna use to not repeat code in our requests.
 enum API: URLRequestConvertible {
     case login(email: String)
-    case feed
+    case feed(breed: String)
     
     private var method: HTTPMethod {
         switch self {
@@ -38,13 +38,27 @@ enum API: URLRequestConvertible {
     
     ///Here, we will get from this function our urlRequest exactly the type that we need.
     func asURLRequest() throws -> URLRequest {
-        let url = try Constants.Service.baseURL.asURL()
-        var urlRequest = URLRequest(url: url.appendingPathComponent(path))
+        var base = Constants.Service.baseURL
         
+        switch self {
+        case .feed(let breed):
+            base = "\(Constants.Service.baseURL)?category=\(breed)"
+        case .login: break
+        }
+        
+        let url = try base.asURL()
+        var urlRequest = URLRequest(url: url.appendingPathComponent(path))
         urlRequest.httpMethod = method.rawValue
         
-        urlRequest.setValue(Constants.Service.json, forHTTPHeaderField: Constants.Service.acceptType)
-        urlRequest.setValue(Constants.Service.json, forHTTPHeaderField: Constants.Service.contentType)
+        switch self {
+        case .feed:
+            let user = RealmManager().getObj()
+            urlRequest.setValue(Constants.Service.json, forHTTPHeaderField: Constants.Service.contentType)
+            urlRequest.setValue(user?.token, forHTTPHeaderField: Constants.Service.authorization)
+        case .login:
+            urlRequest.setValue(Constants.Service.json, forHTTPHeaderField: Constants.Service.acceptType)
+            urlRequest.setValue(Constants.Service.json, forHTTPHeaderField: Constants.Service.contentType)
+        }
         
         if let parameters = parameters {
             do {

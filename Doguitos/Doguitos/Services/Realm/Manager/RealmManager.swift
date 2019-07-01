@@ -19,11 +19,13 @@ class RealmManager {
     }
     
     func deleteObj(obj: UserRealm) {
-        realm!.delete(obj)
+        try? realm!.write {
+            realm!.delete(obj)
+        }
     }
     
     func getObj() -> UserRealm? {
-        let obj = realm!.object(ofType: UserRealm.self, forPrimaryKey: "id")
-        return obj
+        let obj = realm!.objects(UserRealm.self)
+        return obj.first
     }
 }

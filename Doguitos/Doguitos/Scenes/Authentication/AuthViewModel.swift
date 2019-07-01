@@ -46,10 +46,8 @@ class AuthViewModel {
     }()
     
     func setupFlow() -> AuthFlow {
-        guard let _  = realmManager.getObj() else {
-            return .login
-        }
-        return .home
+        let user = realmManager.getObj()
+        return user?.token.isEmpty ?? true ? .login : .home
     }
     
     func login(text: String?) {

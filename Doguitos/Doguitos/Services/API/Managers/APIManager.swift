@@ -6,7 +6,6 @@
 //  Copyright © 2019 Sam. All rights reserved.
 //
 
-import Foundation
 import Alamofire
 
 class APIManager {

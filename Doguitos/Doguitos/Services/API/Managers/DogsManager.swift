@@ -7,3 +7,15 @@
 //
 
 import Foundation
+import Alamofire
+
+class DogsManager {
+    private lazy var apiManager: APIManager = {
+        let manager = APIManager()
+        return manager
+    }()
+    
+    func fetchDogs(by breed: DogBreeds, completion:@escaping (Result<Dogs>) -> Void) {
+        apiManager.createRequest(route: API.feed(breed: breed.rawValue), completion: completion)
+    }
+}

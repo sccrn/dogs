@@ -14,9 +14,11 @@ struct Constants {
         static let signup = "signup"
         static let feed = "feed"
         static let email = "email"
+        static let category = "category"
         
         static let acceptType = "Accept"
         static let contentType = "Content-Type"
+        static let authorization = "Authorization"
         static let acceptEnconding = "Accept-Enconding"
         static let json = "application/json"
     }

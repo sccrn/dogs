@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+struct Dogs: Codable {
+    let category: String
+    let list: [String]
+}

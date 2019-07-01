@@ -9,17 +9,35 @@
 import Foundation
 import UIKit
 
+protocol HomeCoordinatorDelegate: class {
+    func didEndFlow(coordinator: HomeCoordinator)
+}
+
 class HomeCoordinator: Coordinator {
-    
+    weak var delegate: HomeCoordinatorDelegate?
     var childCoordinators: [Coordinator] = []
     var rootViewController: UIViewController { return navigationController }
     
     private lazy var navigationController: UINavigationController = {
         let navigationController = UINavigationController()
+        navigationController.setNavigationBarHidden(false, animated: true)
+        navigationController.navigationBar.barTintColor = .background
+        navigationController.navigationBar.tintColor = .navColor
         return navigationController
     }()
     
     func start() {
-        
+        let homeScreen = HomeController()
+        homeScreen.viewModel.coordinator = self
+        navigationController.pushViewController(homeScreen, animated: false)
+    }
+}
+
+extension HomeCoordinator: HomeVMCoordinatorDelegate {
+    func moveToNextFlow(controller: HomeController, didSelect action: HomeAction) {
+        switch action {
+        case .logout: delegate?.didEndFlow(coordinator: self)
+        case .imageZoom(let dogURL): break
+        }
     }
 }

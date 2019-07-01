@@ -33,6 +33,22 @@ class AppCoordinator: Coordinator {
         splashScreen.viewModel.splashCoordinator = self
         rootViewController.present(splashScreen, animated: false, completion: nil)
     }
+    
+    private func setupHomeFlow() {
+        let homeCoordinator = HomeCoordinator()
+        homeCoordinator.start()
+        homeCoordinator.delegate = self
+        addChildCoordinator(homeCoordinator)
+        rootViewController.present(homeCoordinator.rootViewController, animated: false, completion: nil)
+    }
+    
+    private func setupAuthFlow() {
+        let authCoordinator = AuthenticationCoordinator()
+        authCoordinator.start()
+        authCoordinator.delegate = self
+        addChildCoordinator(authCoordinator)
+        rootViewController.present(authCoordinator.rootViewController, animated: false, completion: nil)
+    }
 }
 
 extension AppCoordinator: SplashCoordinatorDelegate {
@@ -41,16 +57,24 @@ extension AppCoordinator: SplashCoordinatorDelegate {
         childCoordinators.forEach { self.removeChildCoordinator($0) }
         
         switch flow {
-        case .login:
-            let authCoordinator = AuthenticationCoordinator()
-            authCoordinator.start()
-            addChildCoordinator(authCoordinator)
-            rootViewController.present(authCoordinator.rootViewController, animated: false, completion: nil)
-        case .home:
-            let homeCoordinator = HomeCoordinator()
-            homeCoordinator.start()
-            addChildCoordinator(homeCoordinator)
-            rootViewController.present(homeCoordinator.rootViewController, animated: false, completion: nil)
+        case .login: setupAuthFlow()
+        case .home: setupHomeFlow()
         }
+    }
+}
+
+extension AppCoordinator: AuthenticationDelegate {
+    func didEndFlow(coordinator: AuthenticationCoordinator) {
+        coordinator.rootViewController.dismiss(animated: false)
+        self.removeChildCoordinator(coordinator)
+        setupHomeFlow()
+    }
+}
+
+extension AppCoordinator: HomeCoordinatorDelegate {
+    func didEndFlow(coordinator: HomeCoordinator) {
+        coordinator.rootViewController.dismiss(animated: false)
+        self.removeChildCoordinator(coordinator)
+        setupAuthFlow()
     }
 }
