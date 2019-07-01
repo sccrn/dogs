@@ -14,6 +14,12 @@
 		227F370022C974D200365DDA /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227F36FF22C974D200365DDA /* HomeCoordinator.swift */; };
 		227F370222C9757300365DDA /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227F370122C9757300365DDA /* LoginController.xib */; };
 		227F370522C9777F00365DDA /* AuthenticationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227F370422C9777F00365DDA /* AuthenticationCoordinator.swift */; };
+		227F370722C97CDB00365DDA /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227F370622C97CDB00365DDA /* UIView.swift */; };
+		227F370A22C99D6800365DDA /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227F370922C99D6800365DDA /* Validator.swift */; };
+		227F370C22C99D9000365DDA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227F370B22C99D9000365DDA /* Constants.swift */; };
+		227F371022C9B31600365DDA /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227F370F22C9B31600365DDA /* String.swift */; };
+		227F371222C9BA3A00365DDA /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227F371122C9BA3A00365DDA /* API.swift */; };
+		227F371422C9BC7B00365DDA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227F371322C9BC7B00365DDA /* User.swift */; };
 		22D7A50522C9589800572802 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D7A50422C9589800572802 /* AppDelegate.swift */; };
 		22D7A50C22C9589900572802 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22D7A50B22C9589900572802 /* Assets.xcassets */; };
 		22D7A50F22C9589900572802 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22D7A50D22C9589900572802 /* LaunchScreen.storyboard */; };
@@ -61,6 +67,12 @@
 		227F36FF22C974D200365DDA /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		227F370122C9757300365DDA /* LoginController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginController.xib; sourceTree = "<group>"; };
 		227F370422C9777F00365DDA /* AuthenticationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationCoordinator.swift; sourceTree = "<group>"; };
+		227F370622C97CDB00365DDA /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		227F370922C99D6800365DDA /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		227F370B22C99D9000365DDA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		227F370F22C9B31600365DDA /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		227F371122C9BA3A00365DDA /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		227F371322C9BC7B00365DDA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		22D7A50122C9589800572802 /* Doguitos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Doguitos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22D7A50422C9589800572802 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22D7A50B22C9589900572802 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -163,6 +175,32 @@
 			path = Authentication;
 			sourceTree = "<group>";
 		};
+		227F370822C99D4D00365DDA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				227F370922C99D6800365DDA /* Validator.swift */,
+				227F370B22C99D9000365DDA /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		227F370D22C9B2FF00365DDA /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				227F370F22C9B31600365DDA /* String.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		227F370E22C9B30700365DDA /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				22D7A53B22C9595100572802 /* UIColor.swift */,
+				227F370622C97CDB00365DDA /* UIView.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 		22D7A4F822C9589800572802 = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +287,7 @@
 		22D7A53522C958E300572802 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				227F370822C99D4D00365DDA /* Helpers */,
 				22D7A53A22C9594300572802 /* Extensions */,
 			);
 			path = Utils;
@@ -290,7 +329,8 @@
 		22D7A53A22C9594300572802 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				22D7A53B22C9595100572802 /* UIColor.swift */,
+				227F370E22C9B30700365DDA /* UIKit */,
+				227F370D22C9B2FF00365DDA /* Foundation */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -306,6 +346,7 @@
 		22D7A54022C9596C00572802 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				227F371322C9BC7B00365DDA /* User.swift */,
 				22D7A54622C9599B00572802 /* Dogs.swift */,
 			);
 			path = Models;
@@ -314,6 +355,7 @@
 		22D7A54122C9597100572802 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				227F371122C9BA3A00365DDA /* API.swift */,
 				22D7A54222C9597D00572802 /* APIManager.swift */,
 				22D7A55122C95A5A00572802 /* AuthManager.swift */,
 				22D7A55322C95A6400572802 /* DogsManager.swift */,
@@ -598,6 +640,7 @@
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -608,6 +651,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -622,6 +666,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				22D7A55722C95ADC00572802 /* AppCoordinator.swift in Sources */,
+				227F370C22C99D9000365DDA /* Constants.swift in Sources */,
+				227F371022C9B31600365DDA /* String.swift in Sources */,
 				22D7A54322C9597D00572802 /* APIManager.swift in Sources */,
 				22D7A55222C95A5A00572802 /* AuthManager.swift in Sources */,
 				22D7A55022C95A3700572802 /* RealmManager.swift in Sources */,
@@ -629,11 +675,15 @@
 				22D7A53F22C9596400572802 /* BaseController.swift in Sources */,
 				22D7A54522C9599100572802 /* UserRealm.swift in Sources */,
 				227F370022C974D200365DDA /* HomeCoordinator.swift in Sources */,
+				227F371422C9BC7B00365DDA /* User.swift in Sources */,
 				22D7A54722C9599B00572802 /* Dogs.swift in Sources */,
 				227F36F722C96B6200365DDA /* SplashController.swift in Sources */,
+				227F370A22C99D6800365DDA /* Validator.swift in Sources */,
+				227F371222C9BA3A00365DDA /* API.swift in Sources */,
 				22D7A53C22C9595100572802 /* UIColor.swift in Sources */,
 				22D7A55422C95A6400572802 /* DogsManager.swift in Sources */,
 				227F36FB22C96C0800365DDA /* AuthViewModel.swift in Sources */,
+				227F370722C97CDB00365DDA /* UIView.swift in Sources */,
 				22D7A54922C959A700572802 /* Coordinator.swift in Sources */,
 				227F370522C9777F00365DDA /* AuthenticationCoordinator.swift in Sources */,
 				227F36FD22C96E0700365DDA /* LoginController.swift in Sources */,

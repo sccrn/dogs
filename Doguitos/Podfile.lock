@@ -9,12 +9,14 @@ PODS:
   - SDWebImage (4.4.1):
     - SDWebImage/Core (= 4.4.1)
   - SDWebImage/Core (4.4.1)
+  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - Alamofire (= 5.0.0-beta.3)
   - IQKeyboardManagerSwift (= 6.3.0)
   - RealmSwift (= 3.15.0)
   - SDWebImage (= 4.4.1)
+  - SVProgressHUD (= 2.2.5)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -23,6 +25,7 @@ SPEC REPOS:
     - Realm
     - RealmSwift
     - SDWebImage
+    - SVProgressHUD
 
 SPEC CHECKSUMS:
   Alamofire: 50d6fa7e8cbe7f84559e86ab641ffd029db655f8
@@ -30,7 +33,8 @@ SPEC CHECKSUMS:
   Realm: 9b834e1be6062f544805252c812348872dc5d4ed
   RealmSwift: 8a41886f8ab6efef9eb8df97de2f2bb911561a79
   SDWebImage: 47e9b5b925cbce75946c23f0c42dd19464189af4
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: eea62a4283f7ba97794694137e685d7a566324e8
+PODFILE CHECKSUM: 439fdf736de614536ca60a3e7cc2b7d63532a96b
 
 COCOAPODS: 1.5.3

@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginController" customModule="Doguitos" customModuleProvider="target">
             <connections>
+                <outlet property="emailTextField" destination="2E5-hh-eAb" id="Jff-VU-kH8"/>
                 <outlet property="view" destination="iN0-l3-epB" id="omc-1s-09W"/>
             </connections>
         </placeholder>
@@ -19,8 +20,64 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2E5-hh-eAb">
+                    <rect key="frame" x="20" y="252" width="374" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="bSK-lP-zUN"/>
+                    </constraints>
+                    <color key="textColor" red="0.062745098040000002" green="0.098039215690000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                    <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vIp-mp-9JY">
+                    <rect key="frame" x="20" y="352" width="374" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="1qh-fA-MdO"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                    <state key="normal" title="Login">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="actionLogin:" destination="-1" eventType="touchUpInside" id="8AQ-Xv-95E"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="XsQ-OV-QfY">
+                    <rect key="frame" x="157" y="69" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="TpR-PJ-bJH"/>
+                        <constraint firstAttribute="width" constant="100" id="fU7-3K-9Zr"/>
+                    </constraints>
+                </imageView>
+            </subviews>
             <color key="backgroundColor" red="0.84429973363876343" green="0.22712862491607666" blue="0.28506132960319519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vIp-mp-9JY" secondAttribute="trailing" constant="20" id="09v-kt-TDy"/>
+                <constraint firstItem="XsQ-OV-QfY" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="25" id="0ab-vP-NpQ"/>
+                <constraint firstItem="vIp-mp-9JY" firstAttribute="top" secondItem="2E5-hh-eAb" secondAttribute="bottom" constant="60" id="CCs-Hd-BhD"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="2E5-hh-eAb" secondAttribute="trailing" constant="20" id="WmW-3E-LuQ"/>
+                <constraint firstItem="XsQ-OV-QfY" firstAttribute="centerX" secondItem="2E5-hh-eAb" secondAttribute="centerX" id="aWy-2h-Uew"/>
+                <constraint firstItem="2E5-hh-eAb" firstAttribute="top" secondItem="XsQ-OV-QfY" secondAttribute="bottom" constant="83" id="g1h-Zh-DTa"/>
+                <constraint firstItem="2E5-hh-eAb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="qnK-wv-1Sf"/>
+                <constraint firstItem="vIp-mp-9JY" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="ydB-o0-NDY"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="86.956521739130437" y="77.678571428571431"/>
         </view>
     </objects>
+    <resources>
+        <image name="Logo" width="158" height="141"/>
+    </resources>
 </document>

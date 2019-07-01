@@ -6,8 +6,8 @@
 //  Copyright © 2019 Sam. All rights reserved.
 //
 
-import Foundation
 import UIKit
+import SVProgressHUD
 
 class BaseController: UIViewController {
     public init() { super.init(nibName: nil, bundle: nil) }
@@ -18,5 +18,17 @@ class BaseController: UIViewController {
     
     override public var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+    }
+    
+    func showLoading() {
+        SVProgressHUD.show()
+    }
+    
+    func stopLoading() {
+        SVProgressHUD.dismiss()
+    }
+    
+    func showError(err: String) {
+        SVProgressHUD.showError(withStatus: err)
     }
 }

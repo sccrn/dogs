@@ -23,7 +23,7 @@ class RealmManager {
     }
     
     func getObj() -> UserRealm? {
-        let obj = realm!.object(ofType: UserRealm.self, forPrimaryKey: "token")
+        let obj = realm!.object(ofType: UserRealm.self, forPrimaryKey: "id")
         return obj
     }
 }
