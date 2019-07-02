@@ -10,26 +10,36 @@ import Foundation
 import UIKit
 import SDWebImage
 
+protocol CategoryCellDelegate: class {
+    func didSelect(url: String)
+}
+
 class CategoryCell: UITableViewCell {
+    weak var delegate: CategoryCellDelegate?
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var breedDog: UILabel!
-    private var dogURLS: [String] = []
+    private var dog: Dogs?
     private var collectionDataSource: CategoryCellDataSource?
 
     func configure(dogs: Dogs?) {
-        guard let dog = dogs else { return }
-        breedDog.text = dog.category
-        dogURLS = dog.list
-        
+        dog = dogs
+        breedDog.text = dogs?.category.capitalizingFirstLetter()
         setupCollection()
     }
     
     private func setupCollection() {
+        guard let dogs = dog else { return }
         CategoryCellDataSource.setupDogCollection(collection: collectionView)
-        collectionDataSource = CategoryCellDataSource(lists: dogURLS)
+        collectionDataSource = CategoryCellDataSource(dog: dogs, delegate: self)
         collectionView.dataSource = collectionDataSource
         collectionView.delegate = collectionDataSource
         collectionView.contentInsetAdjustmentBehavior = .always
         collectionView.reloadData()
+    }
+}
+
+extension CategoryCell: CategoryCellDataSourceDelegate {
+    func didSelect(url: String) {
+        delegate?.didSelect(url: url)
     }
 }

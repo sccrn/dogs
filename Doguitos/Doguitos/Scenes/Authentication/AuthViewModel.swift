@@ -15,7 +15,7 @@ enum AuthFlow {
 
 enum AuthState {
     case success
-    case error(error: String)
+    case error(error: Error)
 }
 
 protocol AuthDelegate: class {
@@ -52,7 +52,7 @@ class AuthViewModel {
     
     func login(text: String?) {
         guard let email = text else {
-            delegate?.didEndAction(with: .error(error: Constants.Error.mandatoryEmail))
+            delegate?.didEndAction(with: .error(error: DError.mandatoryEmail))
             return
         }
         if !notValidate(email: email) {
@@ -66,7 +66,7 @@ class AuthViewModel {
             case .success(let value):
                 self?.saveToken(user: value, email: email)
             case .failure(let error):
-                self?.delegate?.didEndAction(with: .error(error: error.localizedDescription))
+                self?.delegate?.didEndAction(with: .error(error: error))
             }
         }
     }

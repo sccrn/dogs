@@ -14,13 +14,14 @@ enum HomeCell: CaseIterable {
 
 enum HomeState {
     case success
-    case error(error: String)
+    case error(error: Error)
     case deleted
+    case dogDetails(url: String)
 }
 
 enum HomeAction {
     case logout
-    case imageZoom(dogURL: String)
+    case imageZoom(url: String)
 }
 
 protocol HomeDelegate: class {
@@ -55,7 +56,7 @@ class HomeViewModel {
                 self?.dogs = value
                 self?.delegate?.didEndAction(with: .success)
             case .failure(let error):
-                self?.delegate?.didEndAction(with: .error(error: error.localizedDescription))
+                self?.delegate?.didEndAction(with: .error(error: error))
             }
         }
     }
@@ -75,5 +76,9 @@ extension HomeViewModel {
     func changeDogBreed(breed: DogBreeds) {
         self.breed = breed
         loadDogs()
+    }
+    
+    func getDog(for url: String) {
+        delegate?.didEndAction(with: .dogDetails(url: url))
     }
 }

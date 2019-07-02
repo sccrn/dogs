@@ -21,6 +21,7 @@ class HomeCoordinator: Coordinator {
     private lazy var navigationController: UINavigationController = {
         let navigationController = UINavigationController()
         navigationController.setNavigationBarHidden(false, animated: true)
+        navigationController.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         navigationController.navigationBar.barTintColor = .background
         navigationController.navigationBar.tintColor = .navColor
         return navigationController
@@ -37,7 +38,17 @@ extension HomeCoordinator: HomeVMCoordinatorDelegate {
     func moveToNextFlow(controller: HomeController, didSelect action: HomeAction) {
         switch action {
         case .logout: delegate?.didEndFlow(coordinator: self)
-        case .imageZoom(let dogURL): break
+        case .imageZoom(let url):
+            let viewModel = ImagemViewModel(url: url)
+            viewModel.delegate = self
+            let imageScreen = ImageController(viewModel: viewModel)
+            navigationController.present(imageScreen, animated: true, completion: nil)
         }
+    }
+}
+
+extension HomeCoordinator: ImageCoordinatorDelegate {
+    func moveToHomeScreen(controller: ImageController) {
+        controller.dismiss(animated: true, completion: nil)
     }
 }

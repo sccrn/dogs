@@ -26,6 +26,10 @@
 		226BBCCA22CA051C00068D5A /* CategoryCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226BBCC922CA051C00068D5A /* CategoryCellDataSource.swift */; };
 		226BBCCD22CA05AE00068D5A /* DogCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 226BBCCC22CA05AE00068D5A /* DogCell.xib */; };
 		226BBCCF22CA05B800068D5A /* DogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226BBCCE22CA05B800068D5A /* DogCell.swift */; };
+		226BBCD322CA229D00068D5A /* ImageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 226BBCD222CA229D00068D5A /* ImageController.xib */; };
+		226BBCD522CA22BB00068D5A /* ImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226BBCD422CA22BB00068D5A /* ImageController.swift */; };
+		226BBCD722CA22C500068D5A /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226BBCD622CA22C500068D5A /* ImageViewModel.swift */; };
+		226BBCD922CA2C0100068D5A /* DError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226BBCD822CA2C0100068D5A /* DError.swift */; };
 		227F36F722C96B6200365DDA /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227F36F622C96B6200365DDA /* SplashController.swift */; };
 		227F36F922C96B6D00365DDA /* SplashController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227F36F822C96B6D00365DDA /* SplashController.xib */; };
 		227F36FB22C96C0800365DDA /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227F36FA22C96C0800365DDA /* AuthViewModel.swift */; };
@@ -98,6 +102,10 @@
 		226BBCC922CA051C00068D5A /* CategoryCellDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCellDataSource.swift; sourceTree = "<group>"; };
 		226BBCCC22CA05AE00068D5A /* DogCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DogCell.xib; sourceTree = "<group>"; };
 		226BBCCE22CA05B800068D5A /* DogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogCell.swift; sourceTree = "<group>"; };
+		226BBCD222CA229D00068D5A /* ImageController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageController.xib; sourceTree = "<group>"; };
+		226BBCD422CA22BB00068D5A /* ImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageController.swift; sourceTree = "<group>"; };
+		226BBCD622CA22C500068D5A /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
+		226BBCD822CA2C0100068D5A /* DError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DError.swift; sourceTree = "<group>"; };
 		227F36F622C96B6200365DDA /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
 		227F36F822C96B6D00365DDA /* SplashController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashController.xib; sourceTree = "<group>"; };
 		227F36FA22C96C0800365DDA /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
@@ -172,11 +180,8 @@
 		223A141F22C9DF9600F10A04 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				223A142022C9DFA000F10A04 /* Cell */,
-				223A142122C9DFBF00F10A04 /* HomeController.xib */,
-				223A142322C9DFE200F10A04 /* HomeController.swift */,
-				226BBCC722C9F39D00068D5A /* HomeDataSource.swift */,
-				223A142522C9DFEC00F10A04 /* HomeViewModel.swift */,
+				226BBCD022CA201400068D5A /* Home */,
+				226BBCD122CA203800068D5A /* Image Zoom */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -238,6 +243,28 @@
 			path = Dog;
 			sourceTree = "<group>";
 		};
+		226BBCD022CA201400068D5A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				223A142022C9DFA000F10A04 /* Cell */,
+				223A142122C9DFBF00F10A04 /* HomeController.xib */,
+				223A142322C9DFE200F10A04 /* HomeController.swift */,
+				226BBCC722C9F39D00068D5A /* HomeDataSource.swift */,
+				223A142522C9DFEC00F10A04 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		226BBCD122CA203800068D5A /* Image Zoom */ = {
+			isa = PBXGroup;
+			children = (
+				226BBCD222CA229D00068D5A /* ImageController.xib */,
+				226BBCD422CA22BB00068D5A /* ImageController.swift */,
+				226BBCD622CA22C500068D5A /* ImageViewModel.swift */,
+			);
+			path = "Image Zoom";
+			sourceTree = "<group>";
+		};
 		227F36F322C96B3B00365DDA /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -287,6 +314,7 @@
 			children = (
 				227F370922C99D6800365DDA /* Validator.swift */,
 				227F370B22C99D9000365DDA /* Constants.swift */,
+				226BBCD822CA2C0100068D5A /* DError.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -657,6 +685,7 @@
 				22D7A50C22C9589900572802 /* Assets.xcassets in Resources */,
 				223A142222C9DFBF00F10A04 /* HomeController.xib in Resources */,
 				226BBCCD22CA05AE00068D5A /* DogCell.xib in Resources */,
+				226BBCD322CA229D00068D5A /* ImageController.xib in Resources */,
 				227F36F922C96B6D00365DDA /* SplashController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -784,6 +813,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				226BBCBC22C9EE2100068D5A /* UICollectionView.swift in Sources */,
+				226BBCD522CA22BB00068D5A /* ImageController.swift in Sources */,
 				22D7A55722C95ADC00572802 /* AppCoordinator.swift in Sources */,
 				226BBCCF22CA05B800068D5A /* DogCell.swift in Sources */,
 				227F370C22C99D9000365DDA /* Constants.swift in Sources */,
@@ -795,6 +825,7 @@
 				22D7A55022C95A3700572802 /* RealmManager.swift in Sources */,
 				226BBCC522C9F0AB00068D5A /* DFlowLayout.swift in Sources */,
 				22D7A50522C9589800572802 /* AppDelegate.swift in Sources */,
+				226BBCD722CA22C500068D5A /* ImageViewModel.swift in Sources */,
 				22D7A53F22C9596400572802 /* BaseController.swift in Sources */,
 				22D7A54522C9599100572802 /* UserRealm.swift in Sources */,
 				226BBCC822C9F39D00068D5A /* HomeDataSource.swift in Sources */,
@@ -802,6 +833,7 @@
 				227F370022C974D200365DDA /* HomeCoordinator.swift in Sources */,
 				227F371422C9BC7B00365DDA /* User.swift in Sources */,
 				22D7A54722C9599B00572802 /* Dogs.swift in Sources */,
+				226BBCD922CA2C0100068D5A /* DError.swift in Sources */,
 				226BBCB822C9EE0D00068D5A /* UITableView.swift in Sources */,
 				223A143022C9E1F300F10A04 /* CategoryCell.swift in Sources */,
 				227F36F722C96B6200365DDA /* SplashController.swift in Sources */,

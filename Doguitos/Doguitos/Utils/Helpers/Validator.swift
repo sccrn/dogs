@@ -9,10 +9,10 @@
 import Foundation
 
 struct Validator {
-    static func isEmailValid(email: String) -> String? {
-        if email.isEmpty { return Constants.Error.mandatoryEmail }
+    static func isEmailValid(email: String) -> Error? {
+        if email.isEmpty { return DError.mandatoryEmail }
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
-        if !email.matchRegex(emailRegEx) { return Constants.Error.invalidEmail }
+        if !email.matchRegex(emailRegEx) { return DError.invalidEmail }
         return nil
     }
 }

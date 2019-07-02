@@ -23,6 +23,10 @@ struct Constants {
         static let json = "application/json"
     }
     
+    struct Screen {
+        static let home = "Home"
+    }
+    
     struct Error {
         static let mandatoryEmail = "Email is mandatory"
         static let invalidEmail = "Invalid email"

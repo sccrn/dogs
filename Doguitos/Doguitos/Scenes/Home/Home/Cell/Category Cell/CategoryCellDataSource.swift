@@ -9,27 +9,33 @@
 import Foundation
 import UIKit
 
+protocol CategoryCellDataSourceDelegate: class {
+    func didSelect(url: String)
+}
+
 class CategoryCellDataSource: NSObject {
-    private var lists: [String] = []
+    weak var delegate: CategoryCellDataSourceDelegate?
+    private var dog: Dogs
     
-    init(lists: [String]) {
-        self.lists = lists
+    init(dog: Dogs, delegate: CategoryCellDataSourceDelegate) {
+        self.dog = dog
+        self.delegate = delegate
     }
 }
 
 extension CategoryCellDataSource: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return lists.count
+        return dog.list.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeue(cellClass: DogCell.self, indexPath: indexPath)
-        cell.configure(dogURL: lists[indexPath.row])
+        cell.configure(url: dog.list[indexPath.row])
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        delegate?.didSelect(url: dog.list[indexPath.row])
     }
 }
 

@@ -12,8 +12,10 @@ import UIKit
 
 class DogCell: UICollectionViewCell {
     @IBOutlet weak var dogImage: UIImageView!
-    
-    func configure(dogURL: String) {
-        dogImage.sd_setImage(with: URL(string: dogURL))
+
+    func configure(url: String) {
+        dogImage.sd_setImage(with: URL(string: url), completed: { [weak self] image, error, cacheType, imageURL in
+            self?.dogImage.image = image
+        })
     }
 }

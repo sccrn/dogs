@@ -31,6 +31,7 @@ extension HomeDataSource: UITableViewDelegate, UITableViewDataSource {
         case .category:
             let cell = tableView.dequeue(cellClass: CategoryCell.self, indexPath: indexPath)
             cell.configure(dogs: viewModel.dogs)
+            cell.delegate = self
             return cell
         }
     }
@@ -50,5 +51,11 @@ extension HomeDataSource {
 extension HomeDataSource: GeneralCellDelegate {
     func didSelect(breed: DogBreeds) {
         viewModel.changeDogBreed(breed: breed)
+    }
+}
+
+extension HomeDataSource: CategoryCellDelegate {
+    func didSelect(url: String) {
+        viewModel.getDog(for: url)
     }
 }

@@ -27,6 +27,7 @@ class HomeController: BaseController {
     }
     
     private func loadNavBar() {
+        navigationItem.title = Constants.Screen.home
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "logout"), style: .done, target: self, action: #selector(actionLogout))
     }
     
@@ -57,10 +58,12 @@ extension HomeController: HomeDelegate {
             tableView.reloadRows(at: [IndexPath(row: 1, section: 0)], with: .fade)
         case .error(let error):
             stopLoading()
-            showError(err: error)
+            showError(err: error.localizedDescription)
         case .deleted:
             stopLoading()
             viewModel.coordinator?.moveToNextFlow(controller: self, didSelect: .logout)
+        case .dogDetails(let url):
+            viewModel.coordinator?.moveToNextFlow(controller: self, didSelect: .imageZoom(url: url))
         }
     }
 }

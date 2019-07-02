@@ -37,7 +37,7 @@ extension LoginController: AuthDelegate {
             viewModel.loginCoordinator?.moveForwardToHome(controller: self)
         case .error(let error):
             stopLoading()
-            showError(err: error)
+            showError(err: error.localizedDescription)
         }
     }
 }

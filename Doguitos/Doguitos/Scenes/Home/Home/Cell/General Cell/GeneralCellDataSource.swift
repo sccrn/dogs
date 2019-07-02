@@ -50,6 +50,7 @@ extension GeneralCellDataSource: UICollectionViewDataSource, UICollectionViewDel
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
         delegate?.didSelect(breed: dogs[indexPath.row])
     }
 }

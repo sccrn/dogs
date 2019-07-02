@@ -12,7 +12,7 @@ import RealmSwift
 class RealmManager {
     let realm = try? Realm()
     
-    func saveObjc(obj: UserRealm) {
+    func saveObjc(obj: Object) {
         try? realm!.write {
             realm?.add(obj, update: false)
         }
@@ -23,7 +23,7 @@ class RealmManager {
             realm!.delete(obj)
         }
     }
-    
+
     func getObj() -> UserRealm? {
         let obj = realm!.objects(UserRealm.self)
         return obj.first
