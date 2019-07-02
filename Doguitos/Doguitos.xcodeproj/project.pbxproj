@@ -43,6 +43,7 @@
 		227F371022C9B31600365DDA /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227F370F22C9B31600365DDA /* String.swift */; };
 		227F371222C9BA3A00365DDA /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227F371122C9BA3A00365DDA /* API.swift */; };
 		227F371422C9BC7B00365DDA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227F371322C9BC7B00365DDA /* User.swift */; };
+		2284441922CB2BA300FD77AC /* DGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2284441822CB2BA300FD77AC /* DGradient.swift */; };
 		22D7A50522C9589800572802 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D7A50422C9589800572802 /* AppDelegate.swift */; };
 		22D7A50C22C9589900572802 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22D7A50B22C9589900572802 /* Assets.xcassets */; };
 		22D7A50F22C9589900572802 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22D7A50D22C9589900572802 /* LaunchScreen.storyboard */; };
@@ -119,6 +120,7 @@
 		227F370F22C9B31600365DDA /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		227F371122C9BA3A00365DDA /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		227F371322C9BC7B00365DDA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2284441822CB2BA300FD77AC /* DGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGradient.swift; sourceTree = "<group>"; };
 		22D7A50122C9589800572802 /* Doguitos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Doguitos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22D7A50422C9589800572802 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22D7A50B22C9589900572802 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				226BBCC422C9F0AB00068D5A /* DFlowLayout.swift */,
+				2284441822CB2BA300FD77AC /* DGradient.swift */,
 			);
 			path = DViews;
 			sourceTree = "<group>";
@@ -816,6 +819,7 @@
 				226BBCD522CA22BB00068D5A /* ImageController.swift in Sources */,
 				22D7A55722C95ADC00572802 /* AppCoordinator.swift in Sources */,
 				226BBCCF22CA05B800068D5A /* DogCell.swift in Sources */,
+				2284441922CB2BA300FD77AC /* DGradient.swift in Sources */,
 				227F370C22C99D9000365DDA /* Constants.swift in Sources */,
 				226BBCB422C9EAB600068D5A /* GeneralCellDataSource.swift in Sources */,
 				227F371022C9B31600365DDA /* String.swift in Sources */,
